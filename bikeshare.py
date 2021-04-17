@@ -7,9 +7,9 @@ CITY_DATA = {'Chicago': 'chicago.csv',
              'New York': 'new_york_city.csv',
              'Washington': 'washington.csv'}
 
-# city_chosen defined globaly becasue its used in user_stats function
+# city defined globaly becasue its used in user_stats function
 # to check if the city is 'Washington' to print no gender and birth data for it
-city_chosen=" "
+city=" "
 
 
 def get_filters():
@@ -25,33 +25,33 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    global city_chosen
-    city_chosen= input('Please specify the city you want to get some insights about: Chicago, New York or Washington ').strip()
-    city_chosen = city_chosen.title()
-    while city_chosen not in ('Chicago', 'New York', 'Washington'):
-        city_chosen = input('No available data for the city entered, please choose between: Chicago, New York or Washington ')
-        city_chosen = city_chosen.title()
+    global city
+    city= input('Please specify the city you want to get some insights about: Chicago, New York or Washington ').strip()
+    city = city.title()
+    while city not in ('Chicago', 'New York', 'Washington'):
+        city = input('No available data for the city entered, please choose between: Chicago, New York or Washington ')
+        city = city.title()
 
     # get user input for month (all, january, february, ... , june)
-    month_chosen = input('Please specify the month you want to get some insights about: (January, February, ... , June)\nIf you have no preference at all please enter All ').strip()
-    month_chosen = month_chosen.title()
-    while month_chosen not in ('All', 'January', 'February', 'March', 'April', 'May', 'June'):
-        month_chosen = input('No available data for the month entered, please choose in: (January, February, ... , June) or All if you have no preference ')
-        month_chosen = month_chosen.title()
+    month = input('Please specify the month you want to get some insights about: (January, February, ... , June)\nIf you have no preference at all please enter All ').strip()
+    month = month.title()
+    while month not in ('All', 'January', 'February', 'March', 'April', 'May', 'June'):
+        month = input('No available data for the month entered, please choose in: (January, February, ... , June) or All if you have no preference ')
+        month = month.title()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    day_chosen = input('Please specify the day of week you want to get some insights about: (Monday, Tuesday, ... Sunday)\nIf you have no preference at all please enter All ').strip()
-    day_chosen = day_chosen.title()
-    while day_chosen not in ('All', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'):
-        day_chosen = input('Please enter a valid name of the week, choose between: (Monday, Tuesday, ... Sunday) or All if you have no preference ')
-        day_chosen = day_chosen.title()
+    day = input('Please specify the day of week you want to get some insights about: (Monday, Tuesday, ... Sunday)\nIf you have no preference at all please enter All ').strip()
+    day = day.title()
+    while day not in ('All', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'):
+        day = input('Please enter a valid name of the week, choose between: (Monday, Tuesday, ... Sunday) or All if you have no preference ')
+        day = day.title()
 
     # output message
     print('-' * 40)
-    print('A wise choice, {} is so cool!\nlet me look this up for you!'.format(city_chosen, month_chosen, day_chosen))
+    print('A wise choice, {} is so cool!\nlet me look this up for you!'.format(city, month, day))
     print('-' * 40)
     time.sleep(3)
-    return city_chosen, month_chosen, day_chosen
+    return city, month, day
 
 
 def load_data(city, month, day):
@@ -171,7 +171,7 @@ def user_stats(df):
     user_data_count = df['User Type'].value_counts()
     print('The different types of users count:\n{}\n'.format(user_data_count.to_string()))
 
-    if city_chosen != 'Washington':
+    if city != 'Washington':
         # Gender count
         gender_count = df['Gender'].value_counts()
         print('The gender count:\n{}\n'.format(gender_count.to_string()))
