@@ -3,6 +3,8 @@
 
 
 
+
+
 ### Description
 In this project, we used data provided by Motivate, a bike share system provider for many major cities in the United States, to uncover bike share usage patterns and some descriptive meaningful statistics.
 
@@ -10,8 +12,12 @@ Comparing the system usage between three large cities: Chicago, New York City, a
 
 
 
+
+
 ### Date created
 This project was created on the **8th of April, 2021**
+
+
 
 
 
@@ -24,6 +30,11 @@ This project was created on the **8th of April, 2021**
 
 
 
+
+
 ### Credits
 **https://stackoverflow.com/**
+
 **https://www.w3schools.com/**
+
+**https://pandas.pydata.org/**
