@@ -1,17 +1,23 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
-
-### Date created
-Include the date you created this project and README file.
-
 ### Project Title
-Replace the Project Title
+**Explore US Bikeshare Data**
+
 
 ### Description
-Describe what your project is about and what it does
+In this project, we used data provided by Motivate, a bike share system provider for many major cities in the United States, to uncover bike share usage patterns and some descriptive meaningful statistics.
+
+Comparing the system usage between three large cities: Chicago, New York City, and Washington, DC.
+
+
+
+### Date created
+This project was created on the **8th of April, 2021**
+
 
 ### Files used
-Include the files used
+**chicago.csv**, Randomly selected data for the first six months of 2017 in Chicago.
+**new_york_city.csv**, Randomly selected data for the first six months of 2017 in New York City.
+**Washington.csv**, Randomly selected data for the first six months of 2017 in Washington, DC.
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+**https://stackoverflow.com/**
+**https://www.w3schools.com/**
