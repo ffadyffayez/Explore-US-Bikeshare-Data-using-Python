@@ -33,11 +33,11 @@ def get_filters():
         city = city.title()
 
     # get user input for month (all, january, february, ... , june)
-    month_chosen = input('Please specify the month you want to get some insights about: (January, February, ... , June)\nIf you have no preference at all please enter All ').strip()
-    month_chosen = month_chosen.title()
-    while month_chosen not in ('All', 'January', 'February', 'March', 'April', 'May', 'June'):
-        month_chosen = input('No available data for the month entered, please choose in: (January, February, ... , June) or All if you have no preference ')
-        month_chosen = month_chosen.title()
+    month = input('Please specify the month you want to get some insights about: (January, February, ... , June)\nIf you have no preference at all please enter All ').strip()
+    month = month.title()
+    while month not in ('All', 'January', 'February', 'March', 'April', 'May', 'June'):
+        month = input('No available data for the month entered, please choose in: (January, February, ... , June) or All if you have no preference ')
+        month = month.title()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day_chosen = input('Please specify the day of week you want to get some insights about: (Monday, Tuesday, ... Sunday)\nIf you have no preference at all please enter All ').strip()
@@ -48,10 +48,10 @@ def get_filters():
 
     # output message
     print('-' * 40)
-    print('A wise choice, {} is so cool!\nlet me look this up for you!'.format(city, month_chosen, day_chosen))
+    print('A wise choice, {} is so cool!\nlet me look this up for you!'.format(city, month, day_chosen))
     print('-' * 40)
     time.sleep(3)
-    return city, month_chosen, day_chosen
+    return city, month, day_chosen
 
 
 def load_data(city, month, day):
