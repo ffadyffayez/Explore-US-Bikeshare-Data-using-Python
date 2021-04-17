@@ -40,18 +40,18 @@ def get_filters():
         month = month.title()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    day_chosen = input('Please specify the day of week you want to get some insights about: (Monday, Tuesday, ... Sunday)\nIf you have no preference at all please enter All ').strip()
-    day_chosen = day_chosen.title()
-    while day_chosen not in ('All', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'):
-        day_chosen = input('Please enter a valid name of the week, choose between: (Monday, Tuesday, ... Sunday) or All if you have no preference ')
-        day_chosen = day_chosen.title()
+    day = input('Please specify the day of week you want to get some insights about: (Monday, Tuesday, ... Sunday)\nIf you have no preference at all please enter All ').strip()
+    day = day.title()
+    while day not in ('All', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'):
+        day = input('Please enter a valid name of the week, choose between: (Monday, Tuesday, ... Sunday) or All if you have no preference ')
+        day = day.title()
 
     # output message
     print('-' * 40)
-    print('A wise choice, {} is so cool!\nlet me look this up for you!'.format(city, month, day_chosen))
+    print('A wise choice, {} is so cool!\nlet me look this up for you!'.format(city, month, day))
     print('-' * 40)
     time.sleep(3)
-    return city, month, day_chosen
+    return city, month, day
 
 
 def load_data(city, month, day):
